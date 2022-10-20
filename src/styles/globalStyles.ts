@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { ThemeType } from './theme';
 
 export const GlobalStyles = createGlobalStyle`
 	* {
@@ -9,6 +10,6 @@ export const GlobalStyles = createGlobalStyle`
 
 	body {
 		font-family: 'Jura', sans-serif;
-		background-color: ${({ theme }) => theme.colors.darkGray};
+		background-color: ${({ theme }: { theme: ThemeType }) => theme.colors.darkGray};
 	}
 `;

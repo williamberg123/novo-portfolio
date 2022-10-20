@@ -1,7 +1,7 @@
 import { Container, Navigation } from './styles';
 
 export default function NavBar() {
-	const onClick = (e: MouseEvent, id: string) => {
+	const onClick = (e: any, id: string) => {
 		e.preventDefault();
 
 		document.getElementById(id)?.scrollIntoView({
