@@ -22,7 +22,7 @@ export default function Projects() {
 	return (
 		<Container>
 			{
-				data?.projects.map((project: any, index: number) => <Project {...project} key={`item-${index}`} />)
+				data?.projects.map((project: any, index: number) => <Project animationDelay={0.3 * index} {...project} key={`item-${index}`} />)
 			}
 		</Container>
 	);

@@ -1,10 +1,17 @@
 import { SkillProps } from '../../@types/skill';
-import { Container } from './styles';
+import { TechParamProps } from '../../@types/techParam';
+import TechParam from '../TechParam';
+import { Container, SkillName, TechnologyParemetersContainer } from './styles';
 
-export default function Skill({ name }: SkillProps) {
+export default function Skill({ name, technologyParemeters }: SkillProps) {
 	return (
 		<Container>
-			<span>{name}</span>
+			<SkillName>{name}</SkillName>
+			<TechnologyParemetersContainer>
+				{
+					technologyParemeters.map((item: TechParamProps, index: number) => <TechParam key={`tech-${index + 1}`} {...item} />)
+				}
+			</TechnologyParemetersContainer>
 		</Container>
 	);
 }

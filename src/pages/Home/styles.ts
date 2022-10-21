@@ -24,6 +24,7 @@ export const Section = styled.section`
 	width: 100%;
 	min-height: 100vh;
 	padding: 50px;
+	padding-top: 30px;
 	border-bottom: 1px solid ${({ theme }) => theme.colors.lightGray};
 
 	@media (max-width: 800px) {
@@ -31,7 +32,7 @@ export const Section = styled.section`
 	}
 
 	@media (max-width: 600px) {
-		padding: 20px 0;
+		padding: 0 0 20px;
 	}
 `;
 
@@ -42,6 +43,11 @@ export const SectionTitle = styled.span`
 	color: white;
 	font-size: 1.5rem;
 	margin-top: 20px;
+	padding: 10px 0;
+	position: sticky;
+	top: 0;
+	z-index: 5;
+	background-color: ${({ theme }) => theme.colors.darkGray};
 
 	& .tags {
 		color: ${({ theme }) => theme.colors.lightGreen};

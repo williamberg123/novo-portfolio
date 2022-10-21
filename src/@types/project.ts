@@ -5,4 +5,5 @@ export interface ProjectProps {
 	};
 	githubLink: string;
 	projectLink: string;
+	animationDelay: number;
 }

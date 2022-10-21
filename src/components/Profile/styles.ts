@@ -10,7 +10,7 @@ export const Container = styled.div`
 	border-bottom: 1px solid ${({ theme }) => theme.colors.lightGray};
 
 	@media (max-width: 600px) {
-		padding-top: 50px;
+		// padding-top: 50px;
 	}
 `;
 

@@ -7,6 +7,8 @@ export const Container = styled.div`
 	margin: 20px;
 	color: white;
 	position: relative;
+	opacity: 0%;
+	animation-delay: 2s;
 
 	& > img {
 		width: 100%;
@@ -34,9 +36,9 @@ export const Container = styled.div`
 
 		& > a {
 			height: fit-content;
-			z-index: 5;
+			z-index: 3;
 			color: white;
-			padding: 5px 10px;
+			padding: 10px 20px;
 			border: 2px solid white;
 			border-radius: 3px;
 			text-decoration: none;
@@ -58,5 +60,17 @@ export const Container = styled.div`
 
 	@media (max-width: 600px) {
 		margin: 20px 0;
+	}
+
+	@keyframes toemergeproject {
+		0% {
+			transform: rotate(-10deg) translateX(-50px);
+			opacity: 0%;
+		}
+
+		100% {
+			transform: rotate(0deg) translateX(0px);
+			opacity: 100%;
+		}
 	}
 `;

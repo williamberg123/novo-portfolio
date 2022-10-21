@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { CgMenuRight } from 'react-icons/cg';
+import { CgMenuRight, CgClose } from 'react-icons/cg';
 
 import useMediaQuery from '../../hooks/useMediaQuery';
 import Logo from '../Logo';
@@ -42,7 +42,11 @@ export default function Header() {
 
 			{
 				isMobile
-				? <CgMenuRight onClick={toggleMenu} className="menu-svg" />
+				? (
+					isOpen
+					? <CgClose onClick={toggleMenu} className="menu-svg" />
+					: <CgMenuRight onClick={toggleMenu} className="menu-svg" />
+				)
 				: <NavBar />
 			}
 
