@@ -43,7 +43,7 @@ export default function Home() {
 					<Skills />
 				</Section>
 
-				<Section id="social-medias">
+				{/* <Section id="social-medias">
 					<SectionTitle>
 						<span className="tags">
 							&lt;
@@ -56,10 +56,10 @@ export default function Home() {
 						</span>
 					</SectionTitle>
 
-					<Footer />
-				</Section>
+				</Section> */}
 
 			</Main>
+			<Footer />
 		</Container>
 	);
 }

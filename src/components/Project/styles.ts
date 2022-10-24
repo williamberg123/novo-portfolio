@@ -8,7 +8,6 @@ export const Container = styled.div`
 	color: white;
 	position: relative;
 	opacity: 0%;
-	animation-delay: 2s;
 
 	& > img {
 		width: 100%;

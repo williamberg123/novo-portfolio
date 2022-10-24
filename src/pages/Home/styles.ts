@@ -11,10 +11,6 @@ export const Main = styled.main`
 	padding: 0 50px;
 	margin: auto;
 
-	& section:last-child {
-		border-bottom: none;
-	}
-
 	@media (max-width: 800px) {
 		padding: 0 20px;
 	}
@@ -46,7 +42,7 @@ export const SectionTitle = styled.span`
 	padding: 10px 0;
 	position: sticky;
 	top: 0;
-	z-index: 5;
+	z-index: 4;
 	background-color: ${({ theme }) => theme.colors.darkGray};
 
 	& .tags {

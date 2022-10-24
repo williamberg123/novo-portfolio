@@ -23,8 +23,8 @@ export default function NavBar() {
 					</a>
 				</li>
 				<li>
-					<a onClick={(e) => onClick(e, 'social-medias')} href="">
-						Social Medias
+					<a onClick={(e) => onClick(e, 'more-info')} href="">
+						More Info
 					</a>
 				</li>
 			</Navigation>

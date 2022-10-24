@@ -10,7 +10,7 @@ export const Container = styled.div`
 	border-bottom: 1px solid ${({ theme }) => theme.colors.lightGray};
 
 	@media (max-width: 600px) {
-		// padding-top: 50px;
+		padding-top: 50px;
 	}
 `;
 
@@ -29,7 +29,6 @@ export const ProfileInfo = styled.div`
 
 	@media (max-width: 811px) {
 		margin-top: 20px;
-		align-items: center;
 	}
 
 	@media (max-width: 600px) {
@@ -77,10 +76,21 @@ export const ProfileFigure = styled.figure`
 export const ProfileDescription = styled.span`
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 30px;
+
+	@media (max-width: 830px) {
+		flex-direction: column;
+	}
+`;
+
+export const ProfileName = styled.span`
+	display: flex;
+	align-items: center;
 	font-weight: bold;
 	color: white;
 	font-size: 1.7rem;
-	margin-bottom: 30px;
 
 	& .tags {
 		color: ${({ theme }) => theme.colors.lightGreen};
@@ -99,6 +109,36 @@ export const ProfileDescription = styled.span`
 		}
 	}
 `;
+
+export const LinksContainer = styled.span`
+	display: flex;
+	align-items: center;
+
+	@media (max-width: 830px) {
+		width: 200px;
+		justify-content: space-between;
+		margin-top: 20px;
+	}
+`;
+
+export const ProfileLink = styled.a`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 1px solid white;
+	background-color: ${({ theme }) => theme.colors.darkGray};
+	color: white;
+	margin-right: 10px;
+
+	&:hover {
+		color: ${({ theme }) => theme.colors.lightGray};
+		border-color: ${({ theme }) => theme.colors.lightGray};
+	}
+`;
+
 export const ToContactByGmail = styled.a`
 	display: flex;
 	align-items: center;

@@ -1,10 +1,11 @@
 import { AiOutlineLink } from 'react-icons/ai';
 import { FiDownload } from 'react-icons/fi';
+import { FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa';
 
 import profileImage from '../../assets/new-image.jpg';
 import myCV from '../../assets/cv-williamberg.pdf';
 
-import { Container, DownloadCV, ProfileDescription, ProfileFigure, ProfileInfo, ToContactByGmail } from './styles';
+import { Container, DownloadCV, LinksContainer, ProfileDescription, ProfileFigure, ProfileInfo, ProfileLink, ProfileName, ToContactByGmail } from './styles';
 
 export default function Profile() {
 	return (
@@ -15,15 +16,44 @@ export default function Profile() {
 
 			<ProfileInfo>
 				<ProfileDescription>
-					<span className="tags">
-						&lt;
-					</span>
+					<ProfileName>
+						<span className="tags">
+							&lt;
+						</span>
 
-					<span className="text">William Berg</span>
+						<span className="text">William Berg</span>
 
-					<span className="tags">
-						/&gt;
-					</span>
+						<span className="tags">
+							/&gt;
+						</span>
+					</ProfileName>
+
+					<LinksContainer>
+						<ProfileLink
+							href="https://www.linkedin.com/in/william-diogo"
+							rel="noreferrer"
+							target="_blank"
+						>
+							<FaLinkedinIn />
+						</ProfileLink>
+
+						<ProfileLink
+							href="https://github.com/williamberg123/"
+							rel="noreferrer"
+							target="_blank"
+						>
+							<FaGithub />
+						</ProfileLink>
+
+						<ProfileLink
+							href="https://www.instagram.com/wi_diogo/"
+							rel="noreferrer"
+							target="_blank"
+						>
+							<FaInstagram />
+						</ProfileLink>
+					</LinksContainer>
+
 				</ProfileDescription>
 
 				<span className="buttons">

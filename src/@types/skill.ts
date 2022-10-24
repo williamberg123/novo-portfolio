@@ -4,4 +4,5 @@ export interface SkillProps {
 		name: string;
 		score: number;
 	}[];
+	animationDelay: number;
 }

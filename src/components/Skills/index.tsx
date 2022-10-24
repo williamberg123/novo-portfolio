@@ -20,7 +20,7 @@ export default function Skills() {
 	return (
 		<Container>
 			{
-				data?.technologies.map((tech: any, index: number) => <Skill {...tech} key={`skill-${index + 1}`} />)
+				data?.technologies.map((tech: any, index: number) => <Skill animationDelay={0.2 * index} {...tech} key={`skill-${index + 1}`} />)
 			}
 		</Container>
 	);

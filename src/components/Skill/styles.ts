@@ -11,6 +11,19 @@ export const Container = styled.div`
 	font-weight: bold;
 	margin: 20px;
 	text-transform: uppercase;
+	opacity: 0%;
+
+	@keyframes toemergeskill {
+		0% {
+			transform: rotate(10deg) translateX(50px);
+			opacity: 0%;
+		}
+
+		100% {
+			transform: rotate(0deg) translateX(0px);
+			opacity: 100%;
+		}
+	}
 `;
 
 export const SkillName = styled.span`

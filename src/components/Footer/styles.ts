@@ -1,52 +1,48 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-	width: 100%;
-`;
-
-export const SocialMediasContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin-top: 50px;
-	margin-left: 30px;
-`;
+	max-width: 1000px;
+	margin: auto;
+	padding: 50px 20px 0;
 
-export const SocialMedia = styled.a`
-	position: relative;
-	width: 50px;
-	height: 50px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 50%;
-	background-color: ${({ theme }) => theme.colors.darkGreen};
-	color: white;
-	margin-bottom: 40px;
-	cursor: pointer;
-	transition: 0.2s;
-
-	& > svg {
-		width: 20px;
-		height: 20px;
-	}
-
-	& > span {
-		width: 200px;
+	& div.footer-main-content {
+		width: 100%;
 		display: flex;
-		position: absolute;
-		left: 70px;
-		font-size: 1.5rem;
-	}
-
-	&:hover {
-		color: ${({ theme }) => theme.colors.darkGreen};
-		border: 1px solid ${({ theme }) => theme.colors.darkGreen};
-		background-color: transparent;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 20px;
 	}
 
 	@media (max-width: 600px) {
-		& > span {
-			font-size: 1rem;
+		& div.footer-main-content {
+			flex-direction: column;
 		}
+	}
+`;
+
+export const Author = styled.span`
+	padding: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.3rem;
+	color: white;
+
+	& > a {
+		text-decoration: none;
+		margin-left: 10px;
+		color: ${({ theme }) => theme.colors.darkGreen};
+		font-weight: bold;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	@media (max-width: 600px) {
+		font-size: 1rem;
 	}
 `;

@@ -2,17 +2,23 @@ import { useEffect, useRef } from 'react';
 import { ProjectProps } from '../../@types/project';
 import { Container } from './styles';
 
-export default function Project({ name, image, githubLink, projectLink, animationDelay }: ProjectProps) {
+export default function Project({ name, image, githubLink, projectLink }: ProjectProps) {
 	const projectRef = useRef<HTMLDivElement | null>(null);
 
 	const onScroll = () => {
-		if (window.scrollY >= Number(projectRef.current?.scrollHeight) + 200 && projectRef.current) {
-			projectRef.current.style.animation = `toemergeproject 1.5s ease ${animationDelay}s`;
+		const elementPosition = projectRef.current?.getBoundingClientRect().top;
+		let isOnScreen;
+
+		if (elementPosition) isOnScreen = elementPosition <= (window.innerHeight / 2);
+
+		if (isOnScreen && projectRef.current) {
+			projectRef.current.style.animation = 'toemergeproject 1.5s ease';
+
 			setTimeout(() => {
 				if (projectRef.current) {
 					projectRef.current.style.opacity = '100%';
 				}
-			}, 1500 + animationDelay * 1000);
+			}, 1500);
 		}
 	};
 
