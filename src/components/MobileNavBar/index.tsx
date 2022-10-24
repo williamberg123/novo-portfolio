@@ -30,7 +30,7 @@ export default function MobileNavBar({ toggleMenu, mobileNavBarRef, ...rest }: M
 				</li>
 				<li>
 					<a onClick={(e) => onClick(e, 'social-medias')} href="">
-						Social Medias
+						More Info
 					</a>
 				</li>
 			</Navigation>
