@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { ProjectProps } from '../../@types/project';
-import { Container } from './styles';
+import { Container, ProjectImage } from './styles';
 
 export default function Project({ name, image, githubLink, projectLink }: ProjectProps) {
 	const projectRef = useRef<HTMLDivElement | null>(null);
@@ -32,7 +32,7 @@ export default function Project({ name, image, githubLink, projectLink }: Projec
 
 	return (
 		<Container ref={projectRef}>
-			<img src={image.url} alt={name} />
+			<ProjectImage src={image.url} alt={name} />
 			<div className="hidden-content">
 				<a target="_blank" rel="noreferrer" href={githubLink}>code</a>
 				<a target="_blank" rel="noreferrer" href={projectLink}>live</a>

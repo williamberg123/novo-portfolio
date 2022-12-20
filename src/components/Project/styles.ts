@@ -9,11 +9,6 @@ export const Container = styled.div`
 	position: relative;
 	opacity: 0%;
 
-	& > img {
-		width: 100%;
-		border-radius: 5px;
-	}
-
 	& > span {
 		display: flex;
 		text-transform: uppercase;
@@ -72,4 +67,9 @@ export const Container = styled.div`
 			opacity: 100%;
 		}
 	}
+`;
+
+export const ProjectImage = styled.img`
+	width: 100%;
+	border-radius: 5px;
 `;
